@@ -1,4 +1,4 @@
-import APP_CONFIG from '../../app.config';
+import APP_CONFIG from "../../app.config";
 
 export class Node implements d3.SimulationNodeDatum {
   // optional - defining optional implementation properties - required for relevant typing assistance
@@ -19,14 +19,14 @@ export class Node implements d3.SimulationNodeDatum {
 
   normal = () => {
     return Math.sqrt(this.linkCount / APP_CONFIG.N);
-  }
+  };
 
   get r() {
     return 50 * this.normal() + 10;
   }
 
   get fontSize() {
-    return (30 * this.normal() + 10) + 'px';
+    return 30 * this.normal() + 10 + "px";
   }
 
   get color() {
